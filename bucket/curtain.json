@@ -1,0 +1,35 @@
+{
+    "version": "0.1.0",
+    "description": "Hide any screen in one tap, keep your machine awake while AI agents work, get pinged when they need you.",
+    "homepage": "https://github.com/ChachanNaman/curtain",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ChachanNaman/curtain/releases/download/v0.1.0/Curtain_0.1.0_x64-setup.exe#/dl.exe"
+        }
+    },
+    "innosetup": false,
+    "installer": {
+        "file": "dl.exe",
+        "args": ["/S"]
+    },
+    "uninstaller": {
+        "file": "$dir\\uninstall.exe",
+        "args": ["/S"]
+    },
+    "shortcuts": [["Curtain.exe", "Curtain"]],
+    "checkver": {
+        "github": "https://github.com/ChachanNaman/curtain"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ChachanNaman/curtain/releases/download/v$version/Curtain_$version_x64-setup.exe#/dl.exe"
+            }
+        }
+    },
+    "notes": [
+        "Curtain is unsigned (no code-signing certificate). Windows SmartScreen will warn the",
+        "first time it runs — click \"More info\" then \"Run anyway\"."
+    ]
+}
